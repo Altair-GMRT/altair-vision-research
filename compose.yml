@@ -1,0 +1,9 @@
+services:
+  altair-os:
+    image: altair-avr
+    container_name: altair-avr
+    volumes:
+      - ./src:/altair-avr/src
+      - ./notebooks:/altair-avr/notebooks
+    ports:
+      - "8888:8888"
