@@ -61,4 +61,5 @@ RUN chmod +x /rcl_entrypoint.sh
 
 # ------------[ ENTRYPOINT AND CMD]------------
 ENTRYPOINT ["/rcl_entrypoint.sh"]
-CMD ["jupyter", "notebook"]
+WORKDIR /altair-avr
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8888", "--allow-root"]
